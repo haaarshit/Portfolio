@@ -1,0 +1,120 @@
+.contact {
+    background-color: hsl(219, 40%, 8%);
+    width: 100%;
+    height: 100vh;
+}
+
+.contactRightBar {
+    width: 30%;
+    background-image: linear-gradient(to bottom, hsl(261, 41%, 29%), white);
+    height: inherit;
+    position: absolute;
+    /* background-color: #fff; */
+    right: 0;
+    animation: contactFormAnimation 1s linear forwards;
+    display: none;
+}
+
+.contactContainer {
+    height: 80%;
+    width: 70%;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 100px 0 100px 0;
+    transform: translateX(20%) translateY(-50%);
+    top: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    animation: contactTransition 1s linear forwards;
+}
+
+.contactContainerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+.contactContainerForm>h4 {
+    text-align: center;
+    margin: 1vmax;
+
+}
+
+.contactContainerForm>input,
+.contactContainerForm>textarea {
+    padding: 1vmax;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.362);
+    border-radius: 20px;
+    resize: none;
+    font-family: "roboto";
+    transform: translateX(-100vw);
+    animation: contactFormInput 1s ease-in-out forwards 0.5s;
+}
+
+.contactContainerForm>button {
+    background-color: #993ce0;
+    transform: translateY(-100vh);
+border-radius: 50px;
+    animation: contactFormButton 1s ease-in-out forwards 1s;
+}
+
+.contactContainerForm>button:hover {
+    background-color: hsl(219, 40%, 8%);
+
+}
+
+@keyframes contactTransition {
+    from {
+        transform: translate(-100%, -50%);
+    }
+
+    to {
+
+        transform: translate(20%, -50%);
+    }
+}
+
+@keyframes contactFormAnimation {
+    from {
+        transform: translate(0%, -50%);
+    }
+
+    to {
+
+        transform: translate(0%, 0%);
+    }
+}
+
+@keyframes contactFormInput {
+    to {
+
+        transform: translateX(0);
+    }
+}
+
+@keyframes contactFormButton {
+    to {
+
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width:755px) {
+    .contactContainer {
+        height: 60%;
+        width: 70%;
+    }
+
+    .contactContainerForm {
+        width: 70%;
+    }
+
+    .contactContainerForm>input,
+    .contactContainerForm>textarea {
+        padding: 1vmax;
+        font-size: 2vmax;
+    }
+}

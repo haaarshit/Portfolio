@@ -1,0 +1,69 @@
+.footer{
+    background-color: #151414;
+    padding: 4vmax;
+    /* color: white; */
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    overflow: hidden;
+}
+.footer > div >h5{
+    color: white;
+    border-bottom: 2px solid white;
+    width: 120px;
+    padding: 2px 0;
+    
+}
+.footer > div >h6{
+    margin-bottom: 10px;
+    color: white;
+    border-bottom: 2px solid white;
+    width: 120px;
+    padding: 2px 0;
+}
+.footer > div >p{
+    color: white;
+    padding: 2vmax 0;
+}
+.footer > div:last-child{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.footer > div > a{
+    color:white;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 2px;
+
+}
+.footer > div > a:hover{
+    transform: scale(1.2);
+}
+.footer > div>a:nth-child(2):hover{
+    color: #0a66c2;
+}
+.footer > div>a:nth-child(3):hover{
+    color: #1e75cc;
+}
+.footer > div>a:nth-child(4):hover{
+    color: #ae0d8e;
+}
+
+.contactFooterBtn{
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    background-color: #fff;
+    color: #151414;
+}
+.contactFooterBtn:hover{
+    background-color: unset;
+    outline: 1px solid white;
+    color: white;
+
+}

@@ -1,0 +1,315 @@
+/* canvas css */
+.homeCanvas {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+
+}
+
+.cotainer {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.content {
+    width: 100%;
+    padding-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    border-bottom: 2px solid white;
+    transform: scaleX(1);
+    animation: content-border 4s 1 forwards;
+    animation-delay: 2s;
+    overflow: hidden;
+}
+
+.content>h1,
+.content>p {
+    animation: content-text 4s 1 forwards;
+    transform: translateY(120px);
+    animation-delay: 1s;
+    opacity: 0;
+
+}
+
+@keyframes content-border {
+    to {
+        width: 100%;
+    }
+
+}
+
+@keyframes content-text {
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
+
+/* homeContainer css */
+.homeContainer {
+
+    position: relative;
+    margin: -5px 0;
+    /* background-color: rgb(56, 55, 55); */
+    background-color: #151414;
+    color: white;
+    /* color: white; */
+    text-align: center;
+    padding: 4vmax 0;
+    border-radius: 0px;
+    /* border-radius: 20px; */
+    z-index: 999;
+}
+
+.homeContainer>h1 {
+    font-size: 4rem;
+}
+
+.homeskill {
+
+    height: 1000px;
+    transform: translateY(-200px);
+    background-color: hsl(219, 40%, 8%);
+    position: relative;
+    perspective: 400px;
+    box-sizing: border-box;
+    /* padding: 200px; */
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -200px;
+}
+
+.homeskill>h3 {
+    color: white;
+    position: absolute;
+    top: 220px;
+}
+
+
+.homeCubeSkills {
+    position: absolute;
+    top: 400px;
+    width: 200px;
+    height: 200px;
+    animation: cuberoation 15s linear infinite alternate;
+    transform-style: preserve-3d;
+}
+
+.homeCubeSkillsFaces {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    position: absolute;
+    width: inherit;
+    opacity: 0.6;
+    height: inherit;
+
+}
+
+.homeCubeSkillsFaces>img {
+
+    width: inherit;
+    height: inherit;
+}
+
+.homeCubeSkillsFace1 {
+    transform: translate3d(0, 0, 100px);
+}
+
+.homeCubeSkillsFace2 {
+    transform: rotateY(180deg) translate3d(0, 0, 110px);
+}
+
+.homeCubeSkillsFace3 {
+    transform: rotateY(-90deg) translate3d(0, 0, 110px);
+}
+
+.homeCubeSkillsFace4 {
+    transform: rotateY(90deg) translate3d(0, 0, 110px);
+}
+
+.homeCubeSkillsFace5 {
+    transform: rotateX(90deg) translate3d(0, 0, 110px);
+}
+
+.homeCubeSkillsFace6 {
+    transform: rotateX(-90deg) translate3d(0, 0, 110px);
+}
+
+@keyframes cuberoation {
+    to {
+        transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+    }
+
+}
+
+
+.cubeShadow {
+    position: absolute;
+    top: 600px;
+    width: 250px;
+    height: 30px;
+    margin: 40px 0;
+    background-color: rgba(51, 48, 48, 0.19);
+    border-radius: 50%;
+    margin-top: 130px;
+    filter: blur(5px);
+    animation: cubeShadow 2s ease-in-out infinite alternate;
+}
+
+@keyframes cubeShadow {
+    to {
+        /* transform: rotateY(0deg) rotateX(360deg) rotateZ(0deg); */
+        transform: translateY(-10px) scale(1.2);
+    }
+
+}
+
+.homeskillsBox {
+    display: flex;
+    padding: 0 2vmax;
+    position: absolute;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 350px;
+    width: 400px;
+    flex-wrap: wrap;
+}
+.homeskillsBox>.skill{
+    display: flex;
+    align-items: center;
+    margin: 25px 20px ;
+    justify-content: center;
+}
+.homeskillsBox>.skill >svg{
+    filter: blur(4px);
+    color: white;
+}
+.homeskillsBox>.skill>.skill-text{
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    width: 120px;
+    text-align: center;
+    opacity: 0;
+    scale: 0.2;
+    background-color: #ffffffc5;
+    padding: 5px;
+    transition: all 500ms;
+    border-radius: 10px;
+}
+.homeskillsBox>.skill:nth-child(even):hover>.skill-text{
+    transform: translateY(60px);
+    opacity: 1;
+    scale: 1;
+}
+.homeskillsBox>.skill:nth-child(odd):hover>.skill-text{
+    transform: translateY(-60px);
+    opacity: 1;
+    scale: 1;
+}
+.homeskillsBox>.skill >svg:hover{
+    filter: blur(0px);
+}
+.homeskillsBox>.skill:nth-child(1)>svg:hover{
+    color: skyblue;
+}
+.homeskillsBox>.skill:nth-child(2)>svg:hover{
+    color: yellow;
+}
+.homeskillsBox>.skill:nth-child(3)>svg:hover{
+    color: green;
+}
+.homeskillsBox>.skill:nth-child(4)>svg:hover{
+    color: lightgreen;
+}
+.homeskillsBox>.skill:nth-child(5)>svg:hover{
+    color: rgba(0, 0, 255, 0.938);
+}
+.homeskillsBox>.skill:nth-child(6)>svg:hover{
+    color: rgb(255, 89, 0);
+}
+.homeskillsBox>.skill:nth-child(7)>svg:hover{
+    color: gray;
+}
+.homeskillsBox>.skill:nth-child(8)>svg:hover{
+    color: #7431ca;
+}
+.homeskillsBox>.skill:nth-child(9)>svg:hover{
+    color: #719af4;
+}
+.homeskillsBox>.skill:nth-child(10)>svg:hover{
+    color: #4183c4;
+}
+
+.homeskillsBox>.skill>svg {
+    font-size: 5vmax;
+    color: #fff;
+    margin: 10px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.homeskillsBox>.skill>svg:hover {
+    transform: scale(1.2);
+}
+
+@keyframes homeskillBoxAnimationOn {
+    from {
+        right: -200px;
+        opacity: 0.1;
+
+    }
+
+    to {
+        opacity: 1;
+        right: 10px;
+    }
+}
+
+@keyframes homeskillBoxAnimationOff {
+    from {
+
+        opacity: 1;
+        right: 10px;
+    }
+
+    to {
+        right: -200px;
+        opacity: 0.1;
+    }
+}
+
+@media screen and  (max-width:600px) {
+    .homeskill {
+        height: 800px;
+     
+    }
+    .homeskillsBox {
+     width: 100%;
+    }
+    
+}

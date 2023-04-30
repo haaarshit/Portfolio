@@ -1,0 +1,73 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(219,40%,8%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginContainer{
+    width: 50%;
+    border-radius: 10px;
+    background-color: #fff;
+    box-sizing: 0 0 10px rgba(0,0,0,0.33);
+    border-radius: 0 50px 0 50px;
+}
+.loginForm{
+    border-radius: 5px;
+    height: 60vh;
+    padding: 2vmax;
+}
+.loginForm>h4{
+    text-align: center;
+    margin: 1vmax;
+    letter-spacing: 5px;
+    transform: translateX(-100vw);
+    animation: contactFormInput 1s ease-in-out forwards;
+}
+.loginForm > div{
+    display: flex;
+    flex-direction: column;
+    padding: 2vmax;
+    transform: translateY(-100vh);
+    animation: contactFormInput 1s ease-in-out forwards 0.5s;
+    outline: none;
+    font: 100  1rem "Roboto";
+    justify-content: space-evenly;
+}
+.loginForm > div>input{
+    padding: 1vmax;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.362);
+    border-radius: 5px;
+    resize: none;
+    font-family: "roboto";
+    transform: translate(-100vh);
+    animation: contactFormInput 1s ease-in-out forwards 0.5s;
+    margin: 1vmax;
+    border-radius: 50px;
+}
+
+
+.loginForm>div>button {
+    padding: 1vmax ;
+    background-color: #993ce0;
+    transform: translateY(-100vh);
+    border-radius: 50px;
+   margin: 1vmax;
+    animation: contactFormButton 1s ease-in-out forwards 1s;
+}
+
+.loginForm>div>button:hover {
+    background-color: hsl(219, 40%, 8%);
+
+}
+
+@media screen and (max-width:800px) {
+    .loginContainer {
+        width: 70%;
+    }
+    .loginForm {
+        height: 40vh;
+    }
+}

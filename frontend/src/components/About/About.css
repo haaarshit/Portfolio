@@ -1,0 +1,170 @@
+.about {
+    background-color: #151414;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.aboutcontainer2 {
+    background-color: #151414;
+    width: 90%;
+    height: 100vh;
+    padding: 2vmax;
+    box-shadow: 1px 1px 15px 5px #1514142e;
+    display: flex;
+
+}
+
+.aboutcontainer2>div {
+    width: 100%;
+    padding: 4vmax;
+    display: flex;
+    flex-direction: column;
+    color: #151414;
+    box-sizing: border-box;
+    text-align: start;
+    height: 90vh;
+
+
+}
+
+.aboutcontainer2>div:first-child {
+    align-items: flex-start;
+    color: white;
+    border-radius: 8% 92% 9% 91% / 87% 12% 88% 13%;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutcontainer2>div:first-child>h4 {
+    font-size: 60px;
+}
+
+.aboutcontainer2>div:nth-child(2) {
+    align-items: center;
+    position: relative;
+    justify-content: center;
+
+    background-color: #151414;
+}
+
+.aboutcontainer2>div:nth-child(2) .imagesection {
+    height: 340px;
+    width: 300px;
+    background-image: linear-gradient(rgb(8 202 197 / 59%), rgba(141, 49, 222, 0.886));
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation: bradius 10s infinite linear;
+    overflow: hidden;
+    z-index: 999;
+    transition: all 1s;
+    filter: grayscale(100);
+}
+
+.aboutcontainer2>div:nth-child(2) .imagesection:hover {
+    filter: grayscale(0);
+
+}
+
+
+@keyframes bradius {
+    0% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+    }
+
+    25% {
+        border-radius: 30% 70% 70% 30% / 75% 69% 31% 25%;
+    }
+
+    50% {
+        border-radius: 30% 70% 70% 30% / 75% 30% 70% 25%;
+    }
+
+    75% {
+        border-radius: 30% 70% 56% 44% / 75% 20% 80% 25%;
+    }
+
+    100% {
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+    }
+}
+
+.aboutAvtarImage {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+.bubble {
+    width: 400px;
+    position: absolute;
+    height: 400px;
+    border-radius: 43% 57% 47% 53% / 61% 45% 55% 39%;
+    background-color: #ffffff21;
+    animation: bubble 15s infinite linear;
+
+}
+
+@keyframes bubble {
+    0% {
+        top: 10px;
+        right: 10px;
+    }
+
+    50% {
+        right: 1000px;
+        border-radius: 43% 57% 100% 0% / 61% 45% 55% 39%;
+    }
+
+    100% {
+        top: 100vh;
+        right: 100px;
+        border-radius: 43% 57% 33% 67% / 61% 45% 55% 39%;
+    }
+}
+
+
+
+@media screen and (max-width:600px) {
+    .about {
+        align-items: flex-end;
+    }
+
+    .aboutcontainer {
+        width: 100%;
+        display: none;
+    }
+
+    .aboutcontainer2 {
+        width: 100%;
+        position: relative;
+        flex-direction: column;
+        padding: 4vmax 2vmax;
+        animation: aboutPhoneAnimation 1s ease-in-out forwards;
+    }
+
+    .aboutcontainer2>div>p:last-child {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .aboutAvtarImage {
+        /* transform: translateY(-70%);
+        height: 100px;
+        width: 100px; */
+    }
+
+    /* @keyframes aboutPhoneAnimation {
+        from {
+            transform: rotate(0deg) scale(0.3);
+        }
+
+        to {
+            transform: rotate(360deg) scale(1) translateX(0) translateY(0);
+        }
+    } */
+} 

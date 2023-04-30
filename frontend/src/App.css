@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Dancing+Script&family=IBM+Plex+Sans:wght@100;400&family=Roboto+Condensed&family=Roboto:ital,wght@0,100;0,300;0,400;1,500&family=Tilt+Neon&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+/* .nav1> img{
+  display: none;
+} */
+
+
+
+/* navbar */
+.overlay {
+  height: 0;
+  width: 0;
+ 
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+background-color: hsl(219,40%,8%);
+  overflow-x: hidden;
+  transition: 0.5s;
+  
+}
+.overlay::-webkit-scrollbar{
+  display: none;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay .navlink {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  scale :1;
+  
+}
+
+.overlay .navlink:hover, .overlay .navlink:focus {
+  color: #993ce0;
+  color: #fff;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  margin: 0px 10px;
+}
+.openbtn{
+  margin: 10px 10px;
+  position: fixed;
+  top: 10px;
+  z-index: 99999;
+  color: #993ce0;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay .navlink {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}

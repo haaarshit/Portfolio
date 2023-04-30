@@ -1,0 +1,172 @@
+.adminPanel {
+    width: 100%;
+    min-height: 100vh;
+    /* background-color: #151414; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.adminPanelContainer {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.adminPanelContainer>h4 {
+    padding: 2vmax;
+    text-align: center;
+    letter-spacing: 10px;
+
+}
+
+.adminPanelContainer>form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2vmax
+}
+
+.adminpanelInput {
+    width: 50%;
+    padding: 1vmax 2vmax;
+    border: 1px solid #ccc;
+    font: 100 1rem "Roboto";
+    outline: none;
+    border-radius: 25px;
+    box-sizing: border-box;
+    margin: 2vmax;
+
+}
+
+.adminPanelSkills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminPanelSkills>div {
+    display: flex;
+    align-items: center;
+    margin: 2vmax;
+}
+
+.adminPanelSkills>div h5 {
+    margin-right: 2vmax;
+    font: 100 1.5rem "Roboto";
+}
+
+.adminPanelFileUpload::-webkit-file-upload-button {
+    width: 100%;
+    border-radius: 20px;
+    padding: 1vmax;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    background-color: #151414;
+    border: 1px solid #ccc;
+
+}
+
+.adminPanelAbout {
+    width: 100%;
+}
+
+.adminPanelAbout>fieldset {
+    padding: 2vmax;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adminPanelAbout>fieldset>legend {
+
+    font: 100 2rem "Roboto";
+}
+
+.adminPanelContainer>form>a{
+    font: 100 1rem "Roboto";
+    text-decoration: none;
+    margin: 1vmax;
+    background-color: #151414;
+    color: white;
+    padding: 1vmax;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    width: 200px;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    transition: 1s;
+}
+.adminPanelContainer>form>a>svg{
+    margin-left: 10px;
+}
+.adminPanelContainer>form>a:hover{
+    
+    animation: button 1s 1 linear;
+}
+
+@keyframes button{
+    0%{
+        scale: 1;
+    }
+    50%{
+        scale: 1.1;
+        box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.adminPanelContainer>form>button{
+    width: 30%;
+    margin: 1.5vmax;
+    background-color: #151414;
+    border-radius: 50px;
+}
+.adminPanelContainer>form>button:hover{
+    
+    background-color: #282727a2;
+}
+.adminPanelContainer>button{
+ 
+    margin: 1.5vmax auto;
+    background-color: #da3030;
+    border-radius: 50px;
+    padding: 0.5vmax 2vmax ;
+}
+
+
+.timelineItems{
+    margin:5vmax 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.timelineItem{
+    margin:2vmax 0;
+    text-align: center;
+}
+.timelineItem > button{
+    padding: 3px;
+    background-color: transparent;
+    /* border: 1px solid gray; */
+    border: none;
+    margin: 5px 0;
+    outline: none;
+    cursor: pointer;
+}
+.projectItems{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

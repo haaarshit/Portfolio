@@ -1,0 +1,11 @@
+THREE js
+import three
+->create a scene
+->create a camera
+->create a render
+->set render size
+->render.render with scene and camera
+
+
+
+SMTP->mailtrap.io
